@@ -1,7 +1,9 @@
 <script>
-	import { program } from '../WorkoutProgramming';
-	import { appendToGistFromWorkout, getLastWorkoutSets } from '../Data';
+	import { program } from '../workoutProgramming';
+	import { appendToGistFromWorkout, getLastWorkoutSets } from '../data';
 	import Set from '../Set.svelte';
+	import { sentryInit } from '../sentry';
+
 	let week = 1;
 	let day = 'A';
 
