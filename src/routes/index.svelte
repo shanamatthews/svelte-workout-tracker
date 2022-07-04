@@ -4,6 +4,8 @@
 	import Set from '../Set.svelte';
 	import { sentryInit } from '../sentry';
 
+	sentryInit();
+
 	let week = 1;
 	let day = 'A';
 
