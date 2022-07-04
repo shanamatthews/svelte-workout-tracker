@@ -4,8 +4,8 @@
 
 import * as d3 from "d3";
 
-const gistUrl = "https://api.github.com/gists/60113aabd7eef79215609928c8708c43";
-const ghToken = "token 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";
+const gistUrl = import.meta.env.VITE_GIST_URL;
+const ghToken = import.meta.env.VITE_GH_TOKEN;
 
 function writeWorkoutToGist(url, day, existingGistData, workoutJson) {
   var xhr = new XMLHttpRequest();
