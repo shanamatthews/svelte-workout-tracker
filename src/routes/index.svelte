@@ -1,4 +1,5 @@
 <script>
+	import '../app.css';
 	import { program } from '../workoutProgramming';
 	import { appendToGistFromWorkout, getLastWorkoutSets } from '../data';
 	import Set from '../Set.svelte';
@@ -36,8 +37,6 @@
 		linearCoreSet: {},
 		rotationalCoreSet: {}
 	};
-
-	//	$: console.log(setsRecord[0].set.notes);
 
 	$: setsRecord = [
 		{ exercise: e.A1, set: sets.A1Set1, setN: 1 },
@@ -100,7 +99,9 @@
 	<h2>SUBMITTED!</h2>
 {/if}
 
-Week:<input type="number" bind:value={week} min="1" max="12" on:change={resetSubmission} />
+Week:
+<input type="number" bind:value={week} min="1" max="12" on:change={resetSubmission} />
+<input type="range" bind:value={week} min="1" max="12" on:change={resetSubmission} />
 Day:
 <select bind:value={day} on:change={resetSubmission}>
 	<option value={'A'}>A</option>
@@ -136,6 +137,7 @@ Day:
 </ul>
 
 <h2>A1 and A2 sets</h2>
+<!-- TODO convert this into a svelte for each -->
 {#await prevWorkoutPromise then prevSet}
 	<Set
 		e={e.A1}
@@ -276,3 +278,9 @@ Day:
 {#if submitted}
 	<h2>SUBMITTED!</h2>
 {/if}
+
+<style>
+	h1 {
+		width: 100%;
+	}
+</style>

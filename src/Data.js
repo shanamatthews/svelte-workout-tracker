@@ -1,4 +1,4 @@
-// todo
+// TODO
 // - [ ] Use a real backend instead of a Gist
 // - [ ] Prevent writing the same workout multiple times
 
