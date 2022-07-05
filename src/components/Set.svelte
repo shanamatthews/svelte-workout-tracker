@@ -66,32 +66,12 @@ Reps:
 		bind:value={setObj.reps}
 		min={e.repsRange[0]}
 		max={e.repsRange[1]}
-		step={e.increment}
 		disabled
 	/>
-	<input
-		type="range"
-		bind:value={setObj.reps}
-		min={e.repsRange[0]}
-		max={e.repsRange[1]}
-		step={e.increment}
-		disabled
-	/>
+	<input type="range" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} disabled />
 {:else}
-	<input
-		type="number"
-		bind:value={setObj.reps}
-		min={e.repsRange[0]}
-		max={e.repsRange[1]}
-		step={e.increment}
-	/>
-	<input
-		type="range"
-		bind:value={setObj.reps}
-		min={e.repsRange[0]}
-		max={e.repsRange[1]}
-		step={e.increment}
-	/>
+	<input type="number" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} />
+	<input type="range" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} />
 {/if}
 Notes:
 {#if disabled}
