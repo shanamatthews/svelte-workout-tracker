@@ -1,9 +1,9 @@
 <script>
 	import '../app.css';
-	import { program } from '../workoutProgramming';
-	import { appendToGistFromWorkout, getLastWorkoutSets } from '../data';
-	import Set from '../Set.svelte';
-	import { sentryInit } from '../sentry';
+	import { program } from '../helpers/workoutProgramming';
+	import { appendToGistFromWorkout, getLastWorkoutSets } from '../helpers/data';
+	import Set from '../components/Set.svelte';
+	import { sentryInit } from '../helpers/sentry';
 
 	sentryInit();
 
