@@ -33,6 +33,7 @@ Weight:
 		bind:value={setObj.weight}
 		min={e.weightRange[0]}
 		max={e.weightRange[1]}
+		step={e.increment}
 		disabled
 	/>
 	<input
@@ -40,15 +41,23 @@ Weight:
 		bind:value={setObj.weight}
 		min={e.weightRange[0]}
 		max={e.weightRange[1]}
+		step={e.increment}
 		disabled
 	/>
 {:else}
-	<input type="number" bind:value={setObj.weight} min={e.weightRange[0]} max={e.weightRange[1]} />
+	<input
+		type="number"
+		bind:value={setObj.weight}
+		min={e.weightRange[0]}
+		max={e.weightRange[1]}
+		step={e.increment}
+	/>
 	<input
 		type="range"
 		bind:value={setObj.weight}
 		min={e.weightRange[0]}
 		max={e.weightRange[1]}
+		step={e.increment}
 	/>{/if}
 Reps:
 {#if disabled}
@@ -57,12 +66,32 @@ Reps:
 		bind:value={setObj.reps}
 		min={e.repsRange[0]}
 		max={e.repsRange[1]}
+		step={e.increment}
 		disabled
 	/>
-	<input type="range" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} disabled />
+	<input
+		type="range"
+		bind:value={setObj.reps}
+		min={e.repsRange[0]}
+		max={e.repsRange[1]}
+		step={e.increment}
+		disabled
+	/>
 {:else}
-	<input type="number" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} />
-	<input type="range" bind:value={setObj.reps} min={e.repsRange[0]} max={e.repsRange[1]} />
+	<input
+		type="number"
+		bind:value={setObj.reps}
+		min={e.repsRange[0]}
+		max={e.repsRange[1]}
+		step={e.increment}
+	/>
+	<input
+		type="range"
+		bind:value={setObj.reps}
+		min={e.repsRange[0]}
+		max={e.repsRange[1]}
+		step={e.increment}
+	/>
 {/if}
 Notes:
 {#if disabled}
